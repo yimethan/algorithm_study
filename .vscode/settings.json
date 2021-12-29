@@ -5,6 +5,7 @@
         "atomic": "c",
         "bitset": "c",
         "ostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iosfwd": "cpp"
     }
 }
