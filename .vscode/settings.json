@@ -6,6 +6,9 @@
         "bitset": "c",
         "ostream": "cpp",
         "vector": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "memory": "cpp",
+        "utility": "cpp"
     }
 }
