@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-11650",
+      "appliesTo": "정렬/11650.cpp",
+      "type": "launch"
+    }
+  ]
+}
