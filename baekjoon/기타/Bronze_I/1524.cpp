@@ -1,9 +1,6 @@
 #include<iostream>
 #include<algorithm>
-#include<vector>
 using namespace std;
-
-vector<int> S, B;
 
 int main() {
     int t;
@@ -11,24 +8,18 @@ int main() {
     while(t--) {
         int n, m;
         cin >> n >> m;
-        for(int i=0; i<n; i++) {
-            int num;
-            cin >> num;
-            S.push_back(num);
+        int *S = new int[n];
+        int *B = new int[m];
+        for(int i=0; i<n; i++) cin >> S[i];
+        for(int j=0; j<m; j++) cin >> B[j];
+        sort(S, S+n);
+		sort(B, B+m);
+        int i = 0, j = 0;
+        while(i<n && j<m) {
+            if(S[i] < B[j]) i++;
+            else j++;
         }
-        for(int j=0; j<m; j++) {
-            int num;
-            cin >> num;
-            B.push_back(num);
-        }
-        sort(S.begin(), S.end());
-		sort(B.begin(), B.end());
-        while(!S.empty() && !B.empty()) {
-            if(S.front() >= B.front()) B.erase(B.begin());
-            else S.erase(S.begin());
-        }
-        if(S.empty() && B.empty()) cout << 'C' << endl;
-        else if(S.empty()) cout << 'B' << endl;
-        else if(B.empty()) cout << 'S' << endl;
+        if(i == n) cout << 'B' << endl;
+        else if(j == m) cout << 'S' << endl;
     }
 }
