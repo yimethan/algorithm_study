@@ -1,0 +1,8 @@
+students = list(range(1, 31))
+
+for st in range(28):
+    num = int(input())
+    students.remove(num)
+
+print(min(students))
+print(max(students))
