@@ -1,11 +1,14 @@
+from collections import deque
+
 n = int(input())
-card = list(range(1, n+1))
 
-while len(card) != 1:
-    card.pop(0)
-    num = card.pop(-1)
-    card.append(num)
+cards = deque([i for i in range(1, n+1)])
 
-print(card[0])
+while True:
+    
+    if(len(cards) == 1):
+        print(cards.popleft())
+        exit()
 
-# 시간 초과
+    cards.popleft()
+    cards.append(cards.popleft())
