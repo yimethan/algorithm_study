@@ -1,13 +1,14 @@
 from math import gcd
+import sys
 
-n = int(input())
+n = int(sys.stdin.readline())
 
 gap = []
 
-init = int(input())
+init = int(sys.stdin.readline())
 
 for _ in range(n-1):
-    inp = int(input())
+    inp = int(sys.stdin.readline())
     gap.append(inp - init)
     init = inp
 
